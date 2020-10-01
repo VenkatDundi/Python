@@ -11,11 +11,24 @@ We use randint() from random module to get a random dice throw. Total scores of 
 
 We need to continue this random throw until - One of their scores reach Game Total (Let, it be 10). Once player's total score reaches Game Total, a message specifying that player has won the game is displayed. 
 
-Player's total scores must be less than Game Total to proceed this scenario.
+### Key Points
+1 Player's total scores must be less than Game Total to proceed this scenario.
 
-The function randint() should be given two parameters 1 and 6 so that it specifies a dice throw.
+2 The function randint() should be given two parameters 1 and 6 so that it specifies a dice throw.
 
-User must provide an input ("Y") to give a dice throw (we can set it to anything). Else, user looses a chance.
+3 User must provide an input ("Y") to give a dice throw (we can set it to anything). Else, user looses a chance.
 
-If player's total exceeds the Game Total(Let it be 10), his dice throw becomes invalid and score won't update for that throw.
+4 If player's total exceeds the Game Total(Let it be 10), his dice throw becomes invalid and score won't update for that throw.
 
+
+dice_1.py
+-----------
+Input : We have taken two player names as input.
+
+Output : Message specifying a user has won the game.
+
+Here, we have considered two dictionaries (snake, ladder = {5:2, 7:3, 9:1}, {1:3, 2:4}) to specify functionality of snake and ladder. i.e, If player score after each dice throw is in any of two dictionaries (key-value pairs), the corresponding value will be updated. If player's total score is available in dictionary corresponding to snake, relative value gets deducted. But, if player's score found in ladder's dictionary relative value gets accumulated to total score.
+
+We have specified a message for player if given an invalid input (Other than "Y" in this case).
+
+Please find attached images for sample exceution.
